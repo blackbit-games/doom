@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Freedoom">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/app.css">
+  <title>Freedoom</title>
+</head>
+<body class="play">
+  <div class="stage">
+    <canvas id="canvas" tabindex="0" width="640" height="400"></canvas>
+  </div>
+
+  <div class="hud">
+    <button type="button" class="ghost" id="back-btn">Zurück</button>
+    <button type="button" class="ghost" id="full-btn">Vollbild</button>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <h2 id="overlay-title">Bereit</h2>
+    <p id="overlay-text">Tippe zum Starten. Damit schaltet das iPhone den Ton frei und das Spiel lädt.</p>
+    <button type="button" id="start-btn">Tippen zum Starten</button>
+    <div class="progress" hidden><span id="progress-bar"></span></div>
+    <p id="status" hidden></p>
+  </div>
+
+  <div class="rotate-hint">
+    <strong>Bitte quer halten</strong>
+    <span>Das Spiel ist für das Querformat gedacht.</span>
+  </div>
+
+  <div class="touch" id="touch" hidden>
+    <div class="stick left"><div class="knob"></div></div>
+    <div class="stick right"><div class="knob"></div></div>
+    <button type="button" class="tbtn fire" data-key="fire">Feuer</button>
+    <button type="button" class="tbtn use" data-key="use">Nutzen</button>
+    <button type="button" class="tbtn run" data-key="run">Rennen</button>
+    <button type="button" class="tbtn map" data-key="map">Karte</button>
+    <button type="button" class="tbtn menu" data-key="menu">Menü</button>
+    <button type="button" class="tbtn prev" data-key="prev">Waffe −</button>
+    <button type="button" class="tbtn next" data-key="next">Waffe +</button>
+  </div>
+  <div class="pad-badge" id="pad-badge" hidden>Controller verbunden</div>
+
+  <script src="engine/doomgeneric.js"></script>
+  <script type="module" src="js/play.js"></script>
+</body>
+</html>

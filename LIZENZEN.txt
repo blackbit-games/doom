@@ -1,0 +1,35 @@
+Lizenzen — Freedoom im Browser
+==============================
+
+Alles in diesem Ordner ist kostenlos und kommt aus frei verwendbaren
+Quellen. Es gibt keinen Account und keine Bezahlschranke.
+
+1) Engine (engine/doomgeneric.js und .wasm)
+   Projekt: doomgeneric (auf Basis von Chocolate Doom)
+   Lizenz: GNU GPL Version 2
+   Texte: licenses/engine/LICENSE, licenses/GPL-2.txt
+   Quellcode zur verwendeten Version: licenses/engine/doomgeneric-src.tar.gz
+
+2) Freedoom 1 und 2 (wads/freedoom1.wad, wads/freedoom2.wad)
+   Lizenz: BSD 3-Klausel
+   Texte: licenses/freedoom/COPYING.txt
+   Mitwirkende: licenses/freedoom/CREDITS.txt
+   Musik: licenses/freedoom/CREDITS-MUSIC.txt
+
+3) Doom Shareware (wads/doom1.wad)
+   Offiziell frei verteilbare Shareware-Episode, Version 1.9.
+   Copyright: id Software, Inc.
+   Hinweise und Prüfsumme: licenses/shareware/
+
+4) Musik-Instrumente (music/freepats.tar.gz)
+   FreePats, GNU GPL 2 oder neuer, mit Ausnahme für fertige Musikstücke.
+   Text: licenses/freepats/copyright
+
+5) Startseite, Steuerung, Icons
+   Eigene Dateien, ebenfalls unter GNU GPL Version 2 (zusammen mit der Engine).
+   Die Icons sind selbst gezeichnet, nicht das offizielle Doom-Logo.
+
+„Doom“ ist eine Marke von id Software / ZeniMax. Dieses Projekt ist
+kein offizielles id-Software-Produkt. Freedoom ist ein freier Ersatz
+mit eigener Grafik und Musik. Die Shareware-WAD gehört zu id und darf
+als Shareware weitergegeben werden.

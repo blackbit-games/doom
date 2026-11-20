@@ -1,0 +1,23 @@
+The WebAssembly engine in engine/doomgeneric.{js,wasm} is built from
+doomgeneric by ozkl, which is based on Chocolate Doom.
+
+Upstream: https://github.com/ozkl/doomgeneric
+License: GNU GPL version 2 (see LICENSE and ../GPL-2.txt)
+
+The exact sources used for this build, including our small web patches,
+are in doomgeneric-src.tar.gz. The patches alone are in patches/web-port.diff:
+
+- Larger key queue, comma/period strafe keys
+- DG_InjectDoomKey() for Gamepad/Touch (Safari does not reliably accept
+  synthetic keyboard events)
+- No-op DG_SleepMs so the browser tab stays responsive
+- chdir("/persistent") so saves and default.cfg land in IDBFS
+- GetDefaultConfigDir() returns "./" so config files get a path separator
+- Makefile.web: Emscripten SDL2 / SDL_mixer, no preloaded IWAD, IDBFS,
+  exported inject hook, MODULARIZE
+
+Build (on a machine with the Emscripten SDK):
+
+  source emsdk_env.sh
+  cd doomgeneric/doomgeneric
+  make -f Makefile.web

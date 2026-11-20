@@ -1,0 +1,41 @@
+Credits
+=======
+
+Engine
+------
+doomgeneric, by ozkl and contributors
+https://github.com/ozkl/doomgeneric
+Based on Chocolate Doom (Simon Howard and contributors)
+https://www.chocolate-doom.org/
+License: GNU General Public License, version 2
+
+Game data
+---------
+Freedoom Phase 1 and Phase 2, version 0.13.0
+https://freedoom.github.io/
+License: BSD 3-clause (see licenses/freedoom/COPYING.txt)
+Credits: licenses/freedoom/CREDITS.txt and CREDITS-MUSIC.txt
+
+Doom Shareware IWAD version 1.9 (first episode only)
+Copyright (C) id Software, Inc.
+Freely redistributable shareware data. Not the registered game.
+See licenses/shareware/README.txt
+
+Music instruments
+-----------------
+FreePats General MIDI patch set
+https://freepats.zenvoid.org/
+License: GNU GPL version 2 or later, with a composition exception
+See licenses/freepats/copyright
+
+Web shell (this folder's HTML, CSS, JavaScript, icons)
+------------------------------------------------------
+Written for Kevin's local Freedoom web app.
+The icons are original (a brick wall and a lit doorway) and are not
+the official Doom logo, which is a trademark of id Software / ZeniMax.
+Because this folder ships the GPL-2 engine together with the shell,
+the shell is distributed under the GNU GPL version 2 as well.
+
+Emscripten, SDL2 and SDL_mixer are used at build time and linked into
+the WebAssembly binary under their respective licenses (including
+zlib for SDL and the SDL_mixer / Timidity MIDI support).
