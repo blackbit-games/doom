@@ -8,7 +8,7 @@ export const GAMEPAD_LAYOUT = [
   'Rechter Stick: umsehen (drehen)',
   'LT / L2 oder L3: rennen',
   'RT / R2: schießen',
-  'A / Kreuz: benutzen (Tür, Schalter)',
+  'A / Kreuz: benutzen (Tür, Schalter), im Menü auswählen',
   'LB / L1 oder X / Quadrat: vorherige Waffe',
   'RB / R1 oder Y / Dreieck: nächste Waffe',
   'Select / Back / Share: Karte',
@@ -72,7 +72,12 @@ export function keysFromGamepad(pad, state = {}, maxWeapon = 8) {
   if (down(BUTTON.DRIGHT)) pressed.add(KEY.RIGHTARROW);
 
   if (down(BUTTON.RT)) pressed.add(KEY.FIRE);
-  if (down(BUTTON.A)) pressed.add(KEY.USE);
+  // A / Cross: use in game, and confirm in menus (Doom menus need Enter, prompts need 'y').
+  if (down(BUTTON.A)) {
+    pressed.add(KEY.USE);
+    pressed.add(KEY.ENTER);
+    pressed.add(KEY.YES);
+  }
   if (down(BUTTON.LT) || down(BUTTON.L3)) pressed.add(KEY.RSHIFT);
   if (down(BUTTON.SELECT) || down(BUTTON.R3)) pressed.add(KEY.TAB);
   if (down(BUTTON.START)) pressed.add(KEY.ESCAPE);

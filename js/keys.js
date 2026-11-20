@@ -12,6 +12,7 @@ export const KEY = {
   TAB: 9,
   ESCAPE: 27,
   ENTER: 13,
+  YES: 121,
   F2: 0x80 + 0x3c,
   F3: 0x80 + 0x3d,
   F6: 0x80 + 0x40,

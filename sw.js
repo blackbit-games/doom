@@ -1,4 +1,4 @@
-const CACHE = 'doom-web-v1';
+const CACHE = 'doom-web-v2';
 const PRECACHE = [
   './',
   './index.html',
