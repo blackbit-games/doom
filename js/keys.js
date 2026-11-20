@@ -13,6 +13,9 @@ export const KEY = {
   ESCAPE: 27,
   ENTER: 13,
   YES: 121,
+  // Bound to Doom's own previous/next weapon in the engine (m_controls.c) (skips weapons you don't have).
+  PREVWEAPON: 91,
+  NEXTWEAPON: 93,
   F2: 0x80 + 0x3c,
   F3: 0x80 + 0x3d,
   F6: 0x80 + 0x40,

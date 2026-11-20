@@ -86,21 +86,12 @@ export function keysFromGamepad(pad, state = {}, maxWeapon = 8) {
 
   const nextHeld = down(BUTTON.RB) || down(BUTTON.Y);
   const prevHeld = down(BUTTON.LB) || down(BUTTON.X);
-  let slot = weaponSlot;
-  const max = maxWeapon || 8;
-  if (nextHeld && !state.nextHeld) {
-    slot = weaponSlot + 1;
-    if (slot > max) slot = 1;
-    pressed.add(digitWeapon(slot));
-  } else if (prevHeld && !state.prevHeld) {
-    slot = weaponSlot - 1;
-    if (slot < 1) slot = max;
-    pressed.add(digitWeapon(slot));
-  }
+  if (nextHeld) pressed.add(KEY.NEXTWEAPON);
+  else if (prevHeld) pressed.add(KEY.PREVWEAPON);
 
   return {
     pressed,
-    state: { weaponSlot: slot, nextHeld, prevHeld },
+    state: { weaponSlot, nextHeld, prevHeld },
   };
 }
 

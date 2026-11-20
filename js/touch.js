@@ -43,18 +43,12 @@ export function mountTouch(root, inject, options) {
   bindHold(root.querySelector('[data-key="menu"]'), KEY.ESCAPE);
 
   bindTap(root.querySelector('[data-key="prev"]'), () => {
-    const max = options.maxWeapon ? options.maxWeapon() : 8;
-    state.weapon -= 1;
-    if (state.weapon < 1) state.weapon = max;
-    inject(1, digitWeapon(state.weapon));
-    setTimeout(() => inject(0, digitWeapon(state.weapon)), 40);
+    inject(1, KEY.PREVWEAPON);
+    setTimeout(() => inject(0, KEY.PREVWEAPON), 120);
   });
   bindTap(root.querySelector('[data-key="next"]'), () => {
-    const max = options.maxWeapon ? options.maxWeapon() : 8;
-    state.weapon += 1;
-    if (state.weapon > max) state.weapon = 1;
-    inject(1, digitWeapon(state.weapon));
-    setTimeout(() => inject(0, digitWeapon(state.weapon)), 40);
+    inject(1, KEY.NEXTWEAPON);
+    setTimeout(() => inject(0, KEY.NEXTWEAPON), 120);
   });
 
   const sticks = [
